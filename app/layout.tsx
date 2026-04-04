@@ -9,7 +9,7 @@ const playfair = Playfair_Display({
   display: 'swap',
 });
 
-const cormorant = Cormorant_Garamond({ 
+const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
   weight: ['300', '400', '500', '600', '700'],
   variable: '--font-cormorant',
@@ -17,9 +17,8 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  title: 'Masquerade | Creative Portfolio',
+  title: 'KaniyaGaram | Creative Portfolio',
   description: 'Reveal nothing. Become everything. A portfolio shrouded in mystery and elegance.',
-  generator: 'v0.app',
   icons: {
     icon: [
       {

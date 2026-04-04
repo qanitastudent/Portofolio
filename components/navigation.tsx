@@ -40,7 +40,7 @@ export function Navigation() {
             href="#" 
             className="font-serif text-xl tracking-[0.1em] text-foreground hover:text-primary transition-colors"
           >
-            M.
+            Kaniya
           </a>
 
           {/* Desktop Navigation */}

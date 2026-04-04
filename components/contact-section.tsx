@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react"
 import { Mail, MapPin, Send } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { supabase } from "@/lib/supabase"
 
 export function ContactSection() {
   const sectionRef = useRef<HTMLElement>(null)
@@ -29,13 +30,35 @@ export function ContactSection() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
+
+    const form = e.currentTarget //simpan
     setIsSubmitting(true)
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500))
+    const formData = new FormData(e.currentTarget)
+
+    const name = formData.get("name") as string
+    const email = formData.get("email") as string
+    const subject = formData.get("subject") as string
+    const message = formData.get("message") as string
+
+    const { error } = await supabase.from("contacts").insert([
+      {
+        name,
+        email,
+        inquiry: subject,
+        message,
+      },
+    ])
+
+    if (error) {
+      console.error("ERROR:", error)
+      alert("Gagal kirim pesan!")
+    } else {
+      setIsSubmitted(true)
+      form.reset() // reset form
+    }
 
     setIsSubmitting(false)
-    setIsSubmitted(true)
   }
 
   return (

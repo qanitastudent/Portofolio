@@ -61,7 +61,7 @@ export function AboutSection() {
             {/* Floating Label */}
             <div className="absolute bottom-8 left-8 bg-background/90 backdrop-blur-sm px-4 py-2 border border-border">
               <p className="text-xs tracking-[0.2em] uppercase text-muted-foreground">Qanita</p>
-              <p className="font-serif text-lg text-foreground">Ayu Qanita Putri Wascha</p>
+              <p className="font-serif text-lg text-foreground">Ayu Qanita Putri Wasch</p>
             </div>
           </div>
 

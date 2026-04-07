@@ -14,10 +14,10 @@ const projects = [
     links: { live: "#", github: "#" },
   },
   {
-    title: "E-commerce Platform",
+    title: "Portofolio Website",
     category: "Web Application",
     description: "A luxury fashion e-commerce platform with AI-driven personalization and seamless checkout experiences.",
-    tags: ["React", "Node.js", "MongoDB", "AWS"],
+    tags: ["Next.js", "PostgreSQL", "Vercel", "Tailwind CSS"],
     image: "https://images.unsplash.com/photo-1503602642458-232111445657?w=800&q=80",
     links: { live: "#", github: "#" },
   },

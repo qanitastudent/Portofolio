@@ -44,7 +44,7 @@ export function HeroSection() {
           Ayu Qanita Putri Wasch
         </h5>
 
-        <div className="flex items-center justify-center gap-8 text-sm tracking-[0.2em] uppercase animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-200">
+        <div className="md:flex grid gap-1 items-center md:justify-center md:gap-8 text-sm tracking-[0.2em] uppercase animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-200">
           <span>Frontend Developer</span>
           <span className="w-1 h-1 rounded-full bg-primary" />
           <span>UI/UX Design</span>

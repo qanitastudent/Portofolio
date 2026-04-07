@@ -38,9 +38,8 @@ export function Navigation() {
           {/* Logo */}
           <a 
             href="#" 
-            className="font-serif text-xl tracking-[0.1em] text-foreground hover:text-primary transition-colors"
-          >
-            Kaniya
+            className="font-serif text-xl tracking-[0.1em] text-foreground hover:text-primary transition-colors">
+            Qanita
           </a>
 
           {/* Desktop Navigation */}
@@ -78,7 +77,7 @@ export function Navigation() {
       >
         <div className="flex flex-col h-full">
           <div className="flex items-center justify-between px-6 py-4 border-b border-border/50">
-            <span className="font-serif text-xl tracking-[0.1em]">M.</span>
+            <span className="font-serif text-xl tracking-[0.1em]">Qanita</span>
             <button
               onClick={() => setIsMobileMenuOpen(false)}
               className="p-2 text-foreground hover:text-primary transition-colors"
@@ -91,7 +90,7 @@ export function Navigation() {
           <nav className="flex-1 flex items-center justify-center">
             <ul className="flex flex-col items-center gap-8">
               {navItems.map((item, index) => (
-                <li 
+                <li
                   key={item.href}
                   className="animate-in fade-in slide-in-from-bottom-4"
                   style={{ animationDelay: `${index * 100}ms`, animationFillMode: 'backwards' }}
@@ -110,7 +109,7 @@ export function Navigation() {
 
           <div className="px-6 py-8 border-t border-border/50">
             <p className="text-xs text-center text-muted-foreground tracking-[0.2em] uppercase">
-              The mask never falls — until it does
+              Crafted with intention, built for meaningful experiences.
             </p>
           </div>
         </div>

@@ -127,7 +127,7 @@ export function ContactSection() {
             {/* Social Links */}
             <div className="mt-12 pt-8 border-t border-border/50">
               <h3 className="font-serif text-lg mb-4">Follow the Trail</h3>
-              <div className="flex gap-4">
+              <div className="md:flex grid grid-cols-2 gap-4">
                 {socialLinks.map((social) => (
                   <a
                     key={social.name}

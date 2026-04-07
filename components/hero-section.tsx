@@ -29,21 +29,21 @@ export function HeroSection() {
 
       {/* Decorative Elements */}
       <div className="absolute top-8 left-8 z-20 text-xs tracking-[0.3em] uppercase text-muted-foreground">
-        Nocturna 2025 Collection
+        Diperbarui Tahun 2026
       </div>
 
       {/* Main Content */}
       <div className="relative z-20 text-center px-4 max-w-5xl mx-auto">
-        <h5 
+        <h5
           className="font-serif text-6xl sm:text-8xl md:text-9xl lg:text-[5rem] font-bold tracking-tight mb-6 text-foreground animate-in fade-in slide-in-from-bottom-4 duration-1000"
-          style={{ 
+          style={{
             textShadow: '0 0 80px rgba(212, 175, 55, 0.3)',
             letterSpacing: '-0.02em'
           }}
         >
           Ayu Qanita Putri Wasch
         </h5>
-        
+
         <div className="flex items-center justify-center gap-8 text-sm tracking-[0.2em] uppercase animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-200">
           <span>Frontend Developer</span>
           <span className="w-1 h-1 rounded-full bg-primary" />
@@ -61,13 +61,13 @@ export function HeroSection() {
       {/* Side Text */}
       <div className="absolute left-8 top-1/2 -translate-y-1/2 z-20 hidden lg:block max-w-[200px] text-xs leading-relaxed text-muted-foreground/70 animate-in fade-in slide-in-from-left-4 duration-1000 delay-300">
         <p>
-          Set against a world where masks are more sacred than faces, Masquerade is an ode to silent power, veiled divinity, and the elegance of deception.
+          Frontend Developer yang fokus pada UI modern dan interaktif untuk pengalaman pengguna yang optimal.
         </p>
       </div>
 
       <div className="absolute right-8 top-1/2 -translate-y-1/2 z-20 hidden lg:block max-w-[200px] text-xs leading-relaxed text-muted-foreground/70 text-right animate-in fade-in slide-in-from-right-4 duration-1000 delay-300">
         <p>
-          She moves not to be seen, but to be remembered—like a hymn sung in ruins. Step inside—but do not expect to leave unchanged.
+          UI/UX Designer dengan keahlian dalam menciptakan antarmuka yang estetis dan mudah digunakan.
         </p>
       </div>
 

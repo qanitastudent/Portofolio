@@ -6,28 +6,24 @@ const skills = [
   {
     category: "Frontend",
     items: [
-      { name: "React / Next.js", level: 95 },
-      { name: "TypeScript", level: 90 },
-      { name: "Tailwind CSS", level: 95 },
-      { name: "Framer Motion", level: 85 },
+      { name: "React / Next.js", level: 85, note: "Advanced" },
+      { name: "TypeScript", level: 75, note: "Intermediate" },
+      { name: "Tailwind CSS", level: 50, note: "Advanced" },
+      { name: "Webflow", level: 80, note: "Advanced" },
     ],
   },
   {
     category: "Backend",
     items: [
-      { name: "Node.js", level: 88 },
-      { name: "PostgreSQL", level: 82 },
-      { name: "GraphQL", level: 78 },
-      { name: "REST APIs", level: 92 },
+      { name: "Node.js", level: 65, note: "Basic" },
+      { name: "PostgreSQL", level: 60, note: "Basic" },
     ],
   },
   {
     category: "Design",
     items: [
-      { name: "Figma", level: 88 },
-      { name: "UI/UX Design", level: 85 },
-      { name: "Motion Design", level: 75 },
-      { name: "Brand Identity", level: 80 },
+      { name: "Figma", level: 80, note: "Advanced" },
+      { name: "UI/UX Design", level: 75, note: "Intermediate" },
     ],
   },
 ]
@@ -64,17 +60,17 @@ export function SkillsSection() {
 
       <div className="max-w-6xl mx-auto">
         {/* Header */}
-        <div 
+        <div
           className={`text-center mb-20 transition-all duration-1000 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
           <span className="text-xs tracking-[0.3em] uppercase text-primary">Expertise</span>
           <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl mt-4 text-balance">
-            Masks of Mastery
+            Skills and Expertise
           </h2>
           <p className="mt-6 text-muted-foreground max-w-2xl mx-auto">
-            Each skill is a mask I wear with precision—tools and talents refined through years of devoted practice.
+            A blend of technical skills and creative thinking, developed through hands-on experience in building modern and user-focused web applications.
           </p>
         </div>
 
@@ -100,7 +96,7 @@ export function SkillsSection() {
                   <div key={skill.name}>
                     <div className="flex justify-between items-center mb-2">
                       <span className="text-sm text-foreground">{skill.name}</span>
-                      <span className="text-xs text-muted-foreground">{skill.level}%</span>
+                      <span className="text-xs text-muted-foreground">{skill.note}</span>
                     </div>
                     <div className="h-1 bg-muted overflow-hidden">
                       <div

@@ -61,6 +61,13 @@ export function ContactSection() {
     setIsSubmitting(false)
   }
 
+  const socialLinks = [
+    {name: "GitHub", url: "https://github.com/qanitastudent"},
+    {name: "LinkedIn", url: "#"},
+    {name: "Instagram", url: "#"},
+    {name: "Twitter", url: "#"},
+  ]
+
   return (
     <section
       ref={sectionRef}
@@ -76,10 +83,10 @@ export function ContactSection() {
         >
           <span className="text-xs tracking-[0.3em] uppercase text-primary">Contact</span>
           <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl mt-4 text-balance">
-            Unmask the Conversation
+            Let’s Work Together
           </h2>
           <p className="mt-6 text-muted-foreground max-w-2xl mx-auto">
-            Behind every collaboration lies an invitation. Reach out, and let us craft something extraordinary together.
+            Interested in collaborating or have a project in mind? Feel free to reach out I'm always open to discussing new ideas and opportunities.
           </p>
         </div>
 
@@ -98,10 +105,10 @@ export function ContactSection() {
                 <div>
                   <h3 className="font-serif text-lg mb-1">Email</h3>
                   <a 
-                    href="mailto:hello@masquerade.dev" 
+                    href="mailto:studentqanita@gmail.com" 
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
-                    hello@masquerade.dev
+                    studentqanita@gmail.com
                   </a>
                 </div>
               </div>
@@ -112,7 +119,7 @@ export function ContactSection() {
                 </div>
                 <div>
                   <h3 className="font-serif text-lg mb-1">Location</h3>
-                  <p className="text-muted-foreground">Venice, Italy</p>
+                  <p className="text-muted-foreground">Jakarta, Indonesia</p>
                 </div>
               </div>
             </div>
@@ -121,13 +128,13 @@ export function ContactSection() {
             <div className="mt-12 pt-8 border-t border-border/50">
               <h3 className="font-serif text-lg mb-4">Follow the Trail</h3>
               <div className="flex gap-4">
-                {["GitHub", "LinkedIn", "Twitter", "Dribbble"].map((social) => (
+                {socialLinks.map((social) => (
                   <a
-                    key={social}
-                    href="#"
+                    key={social.name}
+                    href={social.url}
                     className="px-4 py-2 text-xs tracking-[0.15em] uppercase border border-border text-muted-foreground hover:border-primary hover:text-primary transition-colors"
                   >
-                    {social}
+                    {social.name}
                   </a>
                 ))}
               </div>
@@ -136,10 +143,10 @@ export function ContactSection() {
             {/* Quote */}
             <blockquote className="mt-12 p-6 border-l-2 border-primary/50 bg-card">
               <p className="italic text-muted-foreground">
-                &quot;The mask never falls—until it does.&quot;
+                &quot;Behind every interface lies intention—crafted with purpose and precision.&quot;
               </p>
               <cite className="block mt-2 text-xs tracking-[0.2em] uppercase text-primary not-italic">
-                — The Design Table
+                Qanita
               </cite>
             </blockquote>
           </div>
@@ -237,7 +244,7 @@ export function ContactSection() {
                     </span>
                   ) : (
                     <span className="flex items-center justify-center gap-2">
-                      Send Message
+                      Get in touch
                       <Send className="w-4 h-4" />
                     </span>
                   )}

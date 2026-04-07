@@ -8,9 +8,9 @@ export function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           {/* Logo */}
           <div className="text-center md:text-left">
-            <span className="font-serif text-2xl tracking-[0.1em]">MASQUERADE</span>
+            <span className="font-serif text-2xl tracking-[0.1em]">Portofolio</span>
             <p className="text-xs tracking-[0.2em] uppercase text-muted-foreground mt-2">
-              The Development Table
+              Development & Engineering
             </p>
           </div>
 
@@ -27,10 +27,10 @@ export function Footer() {
           {/* Copyright */}
           <div className="text-center md:text-right">
             <p className="text-xs text-muted-foreground">
-              &copy; {new Date().getFullYear()} Masquerade. All rights reserved.
+              &copy; {new Date().getFullYear()} Portofolio. All rights reserved.
             </p>
             <p className="text-xs text-muted-foreground/50 mt-1">
-              Reveal nothing. Become everything.
+              Designed and developed by Qanita.
             </p>
           </div>
         </div>
@@ -38,7 +38,7 @@ export function Footer() {
         {/* Bottom Text */}
         <div className="mt-12 pt-8 border-t border-border/30 text-center">
           <p className="text-xs tracking-[0.3em] uppercase text-muted-foreground/50">
-            A haunting vision draped in velvet and reverence
+            Crafted with intention, built for meaningful experiences.
           </p>
         </div>
       </div>

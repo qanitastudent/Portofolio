@@ -40,7 +40,7 @@ export function AboutSection() {
       <div className="max-w-6xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Image Side */}
-          <div 
+          <div
             className={`relative transition-all duration-1000 ${
               isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-12"
             }`}
@@ -60,8 +60,8 @@ export function AboutSection() {
 
             {/* Floating Label */}
             <div className="absolute bottom-8 left-8 bg-background/90 backdrop-blur-sm px-4 py-2 border border-border">
-              <p className="text-xs tracking-[0.2em] uppercase text-muted-foreground">The Venetian Mask</p>
-              <p className="font-serif text-lg text-foreground">The Buffoon of Vanity</p>
+              <p className="text-xs tracking-[0.2em] uppercase text-muted-foreground">Qanita</p>
+              <p className="font-serif text-lg text-foreground">Ayu Qanita Putri Wascha</p>
             </div>
           </div>
 
@@ -79,23 +79,22 @@ export function AboutSection() {
             </div>
 
             <div className="space-y-6 text-muted-foreground leading-relaxed">
-              <p className="text-lg">
-                A haunting vision draped in velvet and reverence. Beneath the gilded mask lies not a woman, but a question—one asked in silence and answered in shadow.
+              <p>
+                I am passionate about technology, with a strong focus on web development and a growing interest in cybersecurity. I specialize in building modern, responsive, and interactive web interfaces using technologies such as React, Next.js, and Tailwind CSS, with an emphasis on creating intuitive and engaging user experiences.
               </p>
               <p>
-                Every thread of her robe whispers of forgotten rites; every glint of gold conceals the weight of truth. I am a creative developer who believes in the power of mystery and elegance in digital experiences.
+                Alongside development, I explore cybersecurity through web application testing and Capture The Flag (CTF) challenges. This experience allows me to understand how vulnerabilities occur and how to build systems that are more secure and reliable.
               </p>
               <p>
-                With over 8 years of experience crafting immersive web experiences, I specialize in transforming complex ideas into captivating digital narratives that leave lasting impressions.
+                I am experienced in using tools like Figma, Webflow, and Git to support the development process from design to deployment. I continuously strive to improve my skills, adapt to new technologies, and approach problems with a structured and analytical mindset.
               </p>
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-8 mt-12 pt-8 border-t border-border/50">
+            <div className="grid grid-cols-2 gap-8 mt-12 pt-8 border-t border-border/50">
               {[
-                { number: "8+", label: "Years Experience" },
-                { number: "50+", label: "Projects Completed" },
-                { number: "30+", label: "Happy Clients" },
+                { number: "1+", label: "Years Building" },
+                { number: "6+", label: "Projects Completed" },
               ].map((stat) => (
                 <div key={stat.label} className="text-center">
                   <div className="font-serif text-3xl md:text-4xl text-primary">{stat.number}</div>

@@ -4,32 +4,32 @@ import { useEffect, useRef, useState } from "react"
 
 const experiences = [
   {
-    period: "2022 — Present",
-    role: "Senior Creative Developer",
-    company: "The Design Table",
-    description: "Leading frontend development for luxury brand experiences. Architecting scalable design systems and mentoring junior developers.",
-    technologies: ["React", "Next.js", "TypeScript", "Three.js"],
+    period: "Present — Future",
+    role: "Frontend Developer / Web Designer",
+    company: "Ongoing Personal Development",
+    description: "Continuously learning and adapting to industry standards and best practices.",
+    technologies: ["Figma", "Webflow", "UI/UX Principles", "Responsive Design", "Modern Frontend Stack"],
   },
   {
-    period: "2020 — 2022",
-    role: "Full Stack Developer",
-    company: "Nocturne Digital",
-    description: "Built custom e-commerce solutions and interactive web applications for high-end fashion and art clients.",
-    technologies: ["Node.js", "PostgreSQL", "AWS", "GraphQL"],
-  },
-  {
-    period: "2018 — 2020",
+    period: "2025 — Present",
     role: "Frontend Developer",
-    company: "Velvet Studios",
-    description: "Developed responsive web interfaces and contributed to the company&apos;s component library.",
-    technologies: ["React", "SASS", "Webpack", "Jest"],
+    company: "Personal Projects & Practice",
+    description: "Translated ideas into functional products while improving both technical and visual aspects of development.",
+    technologies: ["PostgreSQL", "Git", "GitHub", "React", "Next.js"],
   },
   {
-    period: "2016 — 2018",
-    role: "Junior Developer",
-    company: "Masks & Mirrors Agency",
-    description: "Started career building marketing websites and learning modern web development practices.",
-    technologies: ["JavaScript", "HTML/CSS", "jQuery", "PHP"],
+    period: "2024 — 2025",
+    role: "Cybersecurity Learner",
+    company: "Self Learning and LKS Cybersecurity",
+    description: "Explored cybersecurity concepts through practical challenges such as Capture The Flag (CTF).",
+    technologies: ["Kali Linux","Python Scripting" ,"Web Security Basics", "CTF Platforms"],
+  },
+  {
+    period: "2023 - 2024",
+    role: "Computer and Network Engineer Student",
+    company: "Vocation High School 2 Malang",
+    description: "Built a strong foundation in computer systems, networking, and technical problem-solving.",
+    technologies: ["Networking Fundamentals", "Linux", "Basic System Administration"],
   },
 ]
 
@@ -72,10 +72,10 @@ export function ExperienceSection() {
         >
           <span className="text-xs tracking-[0.3em] uppercase text-primary">Journey</span>
           <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl mt-4 text-balance">
-            Acts of the Performance
+            Professional Journey
           </h2>
           <p className="mt-6 text-muted-foreground max-w-2xl mx-auto">
-            A chronicle of roles played and stages graced—each position a chapter in an unfolding narrative.
+            A progression of learning, exploration, and creation—each stage reflecting a deeper understanding of technology and design.
           </p>
         </div>
 

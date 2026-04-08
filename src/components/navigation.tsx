@@ -10,7 +10,16 @@ const navItems = [
   { label: "Projects", href: "#projects" },
   { label: "Experience", href: "#experience" },
   { label: "Contact", href: "#contact" },
-]
+];
+
+const animationhero = [{
+    text : "#3d3d3b",
+},
+{
+    text : "#fefefe",
+},
+];
+
 
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false)

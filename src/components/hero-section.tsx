@@ -1,7 +1,6 @@
 "use client"
-
-import { useEffect, useState } from "react"
 import { ChevronDown } from "lucide-react"
+import { useHeroAnimation } from "@/src/hooks/useHeroAnimation"
 
 const animationhero = [
   {
@@ -17,23 +16,10 @@ const animationhero = [
 ];
 
 export function HeroSection() {
-  const [scrollY, setScrollY] = useState(0)
-  const [index, setIndex] = useState(0)
+  const { scrollY, index } = useHeroAnimation({
+  length: animationhero.length,
+  })
   const current = animationhero[index]
-
-  useEffect(() => {
-    const handleScroll = () => setScrollY(window.scrollY)
-    window.addEventListener("scroll", handleScroll, { passive: true })
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIndex((prev) => (prev + 1) % animationhero.length)
-    }, 3000)
-
-    return () => clearInterval(interval)
-  }, [])
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -90,7 +76,7 @@ export function HeroSection() {
         </div>
 
         {/* Decorative Cross Symbol */}
-        <div className="mt-16 flex justify-center animate-in fade-in duration-1000 delay-500">
+        <div className="mt-16 flex justify-center animate-in fade-in duration-1000">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-primary/60">
             <path d="M12 2v20M2 12h20M6 6l12 12M18 6L6 18" stroke="currentColor" strokeWidth="1" />
           </svg>
@@ -98,13 +84,13 @@ export function HeroSection() {
       </div>
 
       {/* Side Text */}
-      <div className="absolute left-8 top-1/2 -translate-y-1/2 z-20 hidden lg:block max-w-[200px] text-xs leading-relaxed animate-in fade-in slide-in-from-left-4 duration-1000 delay-300">
+      <div className="absolute left-8 top-1/2 -translate-y-1/2 z-20 hidden lg:block max-w-[200px] text-xs leading-relaxed animate-in fade-in slide-in-from-left-4 duration-1000">
         <p>
           Frontend Developer yang fokus pada UI modern dan interaktif untuk pengalaman pengguna yang optimal.
         </p>
       </div>
 
-      <div className="absolute right-8 top-1/2 -translate-y-1/2 z-20 hidden lg:block max-w-[200px] text-xs leading-relaxed text-right animate-in fade-in slide-in-from-right-4 duration-1000 delay-300">
+      <div className="absolute right-8 top-1/2 -translate-y-1/2 z-20 hidden lg:block max-w-[200px] text-xs leading-relaxed text-right animate-in fade-in slide-in-from-right-4 duration-1000">
         <p>
           UI/UX Designer dengan keahlian dalam menciptakan antarmuka yang estetis dan mudah digunakan.
         </p>
@@ -112,7 +98,7 @@ export function HeroSection() {
 
       {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2 animate-bounce">
-        <span className="text-xs tracking-[0.2em] uppercase text-muted-foreground">Scroll</span>
+        <span className="text-xs tracking-[0.2em] uppercase animate-in slide-in-from-right-4 duration-1000">Scroll</span>
         <ChevronDown className="w-4 h-4 text-primary" />
       </div>
 

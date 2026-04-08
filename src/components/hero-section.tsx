@@ -3,24 +3,23 @@
 import { useEffect, useState } from "react"
 import { ChevronDown } from "lucide-react"
 
-const images = [
+const animationhero = [
   {
     src: "/icons/cat1.png",
     bg: "#fbc462",
+    text : "#3d3d3b",
   },
   {
     src: "/icons/cat2.png",
     bg: "#6e83b5",
+    text : "#fefefe",
   },
-];
-
-const textColor = [
-
 ];
 
 export function HeroSection() {
   const [scrollY, setScrollY] = useState(0)
   const [index, setIndex] = useState(0)
+  const current = animationhero[index]
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY)
@@ -30,7 +29,7 @@ export function HeroSection() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setIndex((prev) => (prev + 1) % images.length)
+      setIndex((prev) => (prev + 1) % animationhero.length)
     }, 3000)
 
     return () => clearInterval(interval)
@@ -40,27 +39,34 @@ export function HeroSection() {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div
-        className="absolute inset-0 z-0"
+        className="absolute inset-0 z-0 animate-in fade-in slide-in-from-bottom-4 duration-1000"
         style={{
-          backgroundColor: images[index].bg,
+          backgroundColor: animationhero[index].bg,
           transform: `translateY(${scrollY * 0.3}px)` }}
       >
         <div className="absolute inset-0 mix-blend-overlay opacity-30 z-10" />
         <img
-          src={images[index].bg}
+          src={animationhero[index].bg}
           className="w-full h-full object-cover object-top scale-110"
         />
         <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 z-20">
         <img
           key={index}
-          src={images[index].src}
+          src={animationhero[index].src}
           className="w-150 h-150 transition-all duration-100 animate-float animate-float-disappear"
         />
       </div>
       </div>
 
+      <div 
+          style={{
+            color: current.text,
+            textShadow: '0 0 80px rgba(212, 175, 55, 0.3)',
+            letterSpacing: '-0.02em'
+          }}
+      >
       {/* Decorative Elements */}
-      <div className="absolute top-8 left-8 z-20 text-xs tracking-[0.3em] uppercase text-muted-foreground">
+      <div className="absolute top-8 left-8 z-20 text-xs tracking-[0.3em] uppercase animate-in fade-in slide-in-from-top-4 duration-1000">
         Diperbarui Tahun 2026
       </div>
 
@@ -69,6 +75,7 @@ export function HeroSection() {
         <h5
           className="font-serif text-6xl sm:text-8xl md:text-9xl lg:text-[5rem] font-bold tracking-tight mb-6 text-foreground animate-in fade-in slide-in-from-bottom-4 duration-1000"
           style={{
+            color: current.text,
             textShadow: '0 0 80px rgba(212, 175, 55, 0.3)',
             letterSpacing: '-0.02em'
           }}
@@ -76,7 +83,7 @@ export function HeroSection() {
           Ayu Qanita Putri Wasch
         </h5>
 
-        <div className="md:flex grid gap-1 items-center md:justify-center md:gap-8 text-sm tracking-[0.2em] uppercase animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-200">
+        <div className="md:flex grid gap-1 items-center md:justify-center md:gap-8 text-sm tracking-[0.2em] uppercase animate-in fade-in slide-in-from-bottom-4 duration-1000">
           <span>Frontend Developer</span>
           <span className="w-1 h-1 rounded-full bg-primary" />
           <span>UI/UX Design</span>
@@ -121,7 +128,8 @@ export function HeroSection() {
           <circle cx="8" cy="8" r="2" fill="currentColor" />
           <path d="M8 0v4M8 12v4M0 8h4M12 8h4" stroke="currentColor" strokeWidth="1" />
         </svg>
-      </div>
+      </div>  
+    </div>
     </section>
   )
 }

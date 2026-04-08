@@ -1,0 +1,58 @@
+import type { Metadata, Viewport } from 'next'
+import { Playfair_Display, Cormorant_Garamond } from 'next/font/google'
+import { Analytics } from '@vercel/analytics/next'
+import './globals.css'
+
+const playfair = Playfair_Display({ 
+  subsets: ["latin"],
+  variable: '--font-playfair',
+  display: 'swap',
+});
+
+const cormorant = Cormorant_Garamond({
+  subsets: ["latin"],
+  weight: ['300', '400', '500', '600', '700'],
+  variable: '--font-cormorant',
+  display: 'swap',
+});
+
+export const metadata: Metadata = {
+  title: 'KaniyaGaram | Creative Portfolio',
+  description: 'Reveal nothing. Become everything. A portfolio shrouded in mystery and elegance.',
+  icons: {
+    icon: [
+      {
+        url: '/fox-logo.png',
+        media: '(prefers-color-scheme: light)',
+      },
+      {
+        url: '/fox-logo.png',
+        media: '(prefers-color-scheme: dark)',
+      },
+      {
+        url: '/fox-logo.svg',
+        type: 'image/svg+xml',
+      },
+    ],
+    apple: '/apple-icon.png',
+  },
+}
+
+export const viewport: Viewport = {
+  themeColor: '#0d0b09',
+}
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode
+}>) {
+  return (
+    <html lang="en" className="dark">
+      <body className={`${playfair.variable} ${cormorant.variable} font-serif antialiased`}>
+        {children}
+        <Analytics />
+      </body>
+    </html>
+  )
+}

@@ -39,22 +39,18 @@ export function HeroSection() {
         <img
           key={index}
           src={animationhero[index].src}
-          className="w-150 h-150 transition-all duration-100 animate-float animate-float-disappear"
+          className="w-full h-full object-cover object-top scale-110 transition-all duration-100 animate-float animate-float-disappear"
         />
       </div>
       </div>
 
-      <div 
+      <div
           style={{
             color: current.text,
             textShadow: '0 0 80px rgba(212, 175, 55, 0.3)',
             letterSpacing: '-0.02em'
           }}
       >
-      {/* Decorative Elements */}
-      <div className="absolute top-8 left-8 z-20 text-xs tracking-[0.3em] uppercase animate-in fade-in slide-in-from-top-4 duration-1000">
-        Diperbarui Tahun 2026
-      </div>
 
       {/* Main Content */}
       <div className="relative z-20 text-center px-4 max-w-5xl mx-auto">

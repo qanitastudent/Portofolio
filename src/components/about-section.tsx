@@ -27,7 +27,7 @@ export function AboutSection() {
     <section
       ref={sectionRef}
       id="about"
-      className="relative py-32 px-6 overflow-hidden"
+      className="relative py-32 px-6 overflow-hidden border-t border-border/50 border:color-border-white/50"
     >
       {/* Background Texture */}
       <div className="absolute inset-0 opacity-5">
@@ -59,7 +59,7 @@ export function AboutSection() {
             <div className="absolute -bottom-4 -right-4 w-24 h-24 border-r border-b border-primary/30" />
 
             {/* Floating Label */}
-            <div className="absolute bottom-8 left-8 bg-background/90 backdrop-blur-sm px-4 py-2 border border-border">
+            <div className="absolute bottom-8 left-8 bg-background backdrop-blur-sm px-4 py-2 border border-border">
               <p className="text-xs tracking-[0.2em] uppercase text-muted-foreground">Qanita</p>
               <p className="font-serif text-lg text-foreground">Ayu Qanita Putri Wasch</p>
             </div>

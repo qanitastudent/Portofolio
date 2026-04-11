@@ -12,14 +12,6 @@ const navItems = [
   { label: "Contact", href: "#contact" },
 ];
 
-const animationhero = [{
-    text : "#3d3d3b",
-},
-{
-    text : "#fefefe",
-},
-];
-
 
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -39,7 +31,7 @@ export function Navigation() {
         className={cn(
           "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
           isScrolled 
-            ? "bg-background/90 backdrop-blur-md border-b border-border/50" 
+            ? "backdrop-blur-md" 
             : "bg-transparent"
         )}
         
@@ -48,7 +40,7 @@ export function Navigation() {
           {/* Logo */}
           <a 
             href="#" 
-            className="font-serif text-xl tracking-[0.1em] text-foreground hover:text-primary transition-colors">
+            className="font-serif text-xl tracking-[0.1em] text-foreground hover:text-card transition-colors">
             Portofolio  
           </a>
 
@@ -58,7 +50,7 @@ export function Navigation() {
               <li key={item.href}>
                 <a
                   href={item.href}
-                  className="text-sm tracking-[0.15em] uppercase text-muted-foreground hover:text-primary transition-colors duration-300 relative group"
+                  className="text-sm tracking-[0.15em] uppercase text-foreground hover:text-card transition-colors duration-300 relative group"
                 >
                   {item.label}
                   <span className="absolute -bottom-1 left-0 w-0 h-px bg-primary transition-all duration-300 group-hover:w-full" />
